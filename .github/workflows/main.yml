@@ -1,0 +1,23 @@
+name: CI/CD for Todo App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and Deploy
+        run: |
+          # Replace these commands with your actual build and deployment steps
+          npm install
+          npm test
+          # Example: Deploy to GitHub Pages
+          npm run deploy
